@@ -11,17 +11,11 @@ type dog3 = bird3 & {
   age: number;
 };
 
-type cat = {
-  name: string;
+type cat = Pick<bird3, "name" | "canSleep"> & {
   color: string;
-  canSleep: boolean;
 };
 
-type Snake = {
-  canEat: boolean;
-  canDrink: boolean;
-  canSleep: boolean;
-};
+type Snake = Omit<bird3, "name" | "canFly">;
 
 const myDog3: dog3 = {
   name: "Firulais",
