@@ -1,4 +1,4 @@
-type bird1 = {
+type bird2 = {
   name: string;
   canEat: boolean;
   canDrink: boolean;
@@ -6,12 +6,12 @@ type bird1 = {
   canFly: boolean;
 };
 
-type dog1 = bird1 & {
-  race: string;
+type dog2 = bird2 & {
+  race: "Husky" | "Labrador" | "Chucho";
   age: number;
 };
 
-const myDog1: dog1 = {
+const myDog2: dog2 = {
   name: "Firulais",
   canEat: true,
   canDrink: true,
