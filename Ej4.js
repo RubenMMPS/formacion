@@ -54,6 +54,6 @@ console.log(presidente.userData());
 /* Tercer código
 Si el usuario tiene 30 años y no es español, recibirá una ayuda del gobierno de 2000€ */
 
-user = new usuario("Álvaro", "Morón", 30, "", 0, "Morocco");
+const user = new usuario("Álvaro", "Morón", 30, "", 0, "Morocco");
 
 console.log(user.esExtrangero());
