@@ -26,3 +26,5 @@ const myDog3: dog3 = {
   race: "Labrador",
   age: 5,
 };
+
+console.log(myDog3);

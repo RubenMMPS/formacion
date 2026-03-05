@@ -4,6 +4,9 @@ Dado los siguientes códigos, refactorízalos como consideres, si consideras que
 Primer código
 Tenemos una función que saca el nombre completo del usuario con el nombre y apellido */
 
+let nacionalidadNativo = "España";
+let edadAyuda = 30;
+
 class usuario {
   constructor(
     nombre,
@@ -35,14 +38,13 @@ class usuario {
   }
 
   esExtrangero() {
-    if (this.nacionalidad != "España" && this.edad == "30") {
+    if (this.nacionalidad != nacionalidadNativo && this.edad == edadAyuda)
       return "Apto para la ayuda del gobierno";
-    } else {
-      return "No es apto para la ayuda del gobierno";
-    }
+
+    return "No es apto para la ayuda del gobierno";
   }
 }
-var presidente = new usuario("Pedro", "Sánchez", 45, "Barro man", 1000);
+let presidente = new usuario("Pedro", "Sánchez", 45, "Barro man", 1000);
 
 console.log(presidente.nombreUsuario());
 
