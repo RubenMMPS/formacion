@@ -1,0 +1,64 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$tertiary-color: #e74c3c;
+$font-family: "Arial", sans-serif;
+$primary-font-size: 2rem;
+$secondary-font-size: 1.5rem;
+$tertiary-font-size: 1.25rem;
+$transition: scale(1.1);
+
+@mixin flexible($dis, $direction, $corte, $justify, $align) {
+  display: $dis;
+  flex-flow: $direction $corte;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+body {
+  @include flexible(flex, row, nowrap, center, center);
+  min-height: 100vh;
+  margin: 0;
+}
+
+.flexbox {
+  @include flexible(flex, column, nowrap, center, center);
+  width: 30rem;
+  gap: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  color: $primary-color;
+  font-family: $font-family;
+  font-size: $primary-font-size;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: $secondary-color;
+  font-family: $font-family;
+  font-size: $secondary-font-size;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: $tertiary-color;
+  font-family: $font-family;
+  font-size: $tertiary-font-size;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+}
+
+.btn {
+  color: $primary-color;
+  font-family: $font-family;
+  font-size: $primary-font-size;
+  &:hover {
+    transform: $transition;
+  }
+}
