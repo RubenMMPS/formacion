@@ -1,11 +1,11 @@
 :root{
     --primary-color: #3498db;
     --secondary-color: #2ecc71;
-    --terciary-color: #e74c3c;
+    --tertiary-color: #e74c3c;
     --font-family: 'Arial', sans-serif;
     --primary-font-size: 2rem;
     --secondary-font-size: 1.5rem;
-    --terciary-font-size: 1.25rem;
+    --tertiary-font-size: 1.25rem;
     --transition: scale(1.1);
 }
 
@@ -24,9 +24,9 @@ h2{
 }
 
 h3{
-    color: var(--terciary-color);
+    color: var(--tertiary-color);
     font-family: var(--font-family);
-    font-size: var(--terciary-font-size);
+    font-size: var(--tertiary-font-size);
     margin-bottom: 10px;
 }
 
