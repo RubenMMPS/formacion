@@ -1,23 +1,13 @@
-type bird3 = {
-  name: string;
-  canEat: boolean;
-  canDrink: boolean;
-  canSleep: boolean;
-  canFly: boolean;
-};
+import { bird } from "./Ej1";
+import { dog2 } from "./Ej2";
 
-type dog3 = bird3 & {
-  race: "Husky" | "Labrador" | "Chucho";
-  age: number;
-};
-
-type cat = Pick<bird3, "name" | "canSleep"> & {
+type cat = Pick<bird, "name" | "canSleep"> & {
   color: string;
 };
 
-type Snake = Omit<bird3, "name" | "canFly">;
+type Snake = Omit<bird, "name" | "canFly">;
 
-const myDog3: dog3 = {
+const myDog3: dog2 = {
   name: "Firulais",
   canEat: true,
   canDrink: true,

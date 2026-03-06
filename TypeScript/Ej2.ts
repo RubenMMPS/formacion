@@ -1,15 +1,9 @@
-type bird2 = {
-  name: string;
-  canEat: boolean;
-  canDrink: boolean;
-  canSleep: boolean;
-  canFly: boolean;
-};
+import { bird } from "./Ej1";
 
-type dog2 = bird2 & {
+export interface dog2 extends bird {
   race: "Husky" | "Labrador" | "Chucho";
   age: number;
-};
+}
 
 const myDog2: dog2 = {
   name: "Firulais",
