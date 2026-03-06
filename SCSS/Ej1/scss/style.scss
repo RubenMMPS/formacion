@@ -1,0 +1,33 @@
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$tertiary-color: #e74c3c;
+$font-family: "Arial", sans-serif;
+$primary-font-size: 2rem;
+$secondary-font-size: 1.5rem;
+$tertiary-font-size: 1.25rem;
+$transition: scale(1.1);
+
+h1 {
+  color: $primary-color;
+  font-family: $font-family;
+  font-size: $primary-font-size;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: $secondary-color;
+  font-family: $font-family;
+  font-size: $secondary-font-size;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: $tertiary-color;
+  font-family: $font-family;
+  font-size: $tertiary-font-size;
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  transform: $transition;
+}
