@@ -1,0 +1,35 @@
+:root{
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --terciary-color: #e74c3c;
+    --font-family: 'Arial', sans-serif;
+    --primary-font-size: 2rem;
+    --secondary-font-size: 1.5rem;
+    --terciary-font-size: 1.25rem;
+    --transition: scale(1.1);
+}
+
+h1{
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    font-size: var(--primary-font-size);
+    margin-bottom: 20px;
+}
+
+h2{
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-size: var(--secondary-font-size);
+    margin-bottom: 15px;
+}
+
+h3{
+    color: var(--terciary-color);
+    font-family: var(--font-family);
+    font-size: var(--terciary-font-size);
+    margin-bottom: 10px;
+}
+
+.btn:hover{
+transform: var(--transition);
+}
