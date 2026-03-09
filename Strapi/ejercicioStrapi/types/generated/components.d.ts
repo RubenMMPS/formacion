@@ -1,5 +1,39 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlocksGallery extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_galleries';
+  info: {
+    displayName: 'gallery';
+  };
+  attributes: {
+    media: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+  };
+}
+
+export interface BlocksLinks extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_links';
+  info: {
+    displayName: 'links';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksRichText extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_rich_texts';
+  info: {
+    displayName: 'rich_text';
+  };
+  attributes: {
+    content: Schema.Attribute.RichText;
+  };
+}
+
 export interface ClassAdditionalDetails extends Struct.ComponentSchema {
   collectionName: 'components_class_additional_details';
   info: {
@@ -72,6 +106,9 @@ export interface TeacherAdditionalDetails extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'blocks.gallery': BlocksGallery;
+      'blocks.links': BlocksLinks;
+      'blocks.rich-text': BlocksRichText;
       'class.additional-details': ClassAdditionalDetails;
       'event.additional-details': EventAdditionalDetails;
       'event.material': EventMaterial;
