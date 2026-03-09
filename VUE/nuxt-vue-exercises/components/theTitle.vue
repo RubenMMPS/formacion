@@ -1,11 +1,9 @@
-<script setup lang="ts">
-const props = defineProps<{
-  propTitle: string;
-}>();
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
-    <h1>{{ propTitle }}</h1>
+    <h1>
+      <slot>Título por defecto</slot>
+    </h1>
   </div>
 </template>

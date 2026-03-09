@@ -1,11 +1,7 @@
-<script setup lang="ts">
-const myTitle = ref("¡Bienvenido a mi Proyecto Nuxt 4!");
-</script>
-
 <template>
   <div>
-    <theTitle :propTitle="myTitle" />
+    <TheTitle> Mi Título con Slots </TheTitle>
 
-    <theTitle propTitle="Segundo título" />
+    <TheTitle></TheTitle>
   </div>
 </template>
