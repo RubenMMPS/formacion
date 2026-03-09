@@ -1,9 +1,11 @@
 <script setup lang="ts">
-const message = ref("¡Proyecto configurado correctamente!");
+const myTitle = ref("¡Bienvenido a mi Proyecto Nuxt 4!");
 </script>
 
 <template>
-  <main>
-    <p>{{ message }}</p>
-  </main>
+  <div>
+    <theTitle :propTitle="myTitle" />
+
+    <theTitle propTitle="Segundo título" />
+  </div>
 </template>
