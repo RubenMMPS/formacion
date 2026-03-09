@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_teacher_additional_details",
+  "info": {
+    "displayName": "additional_details"
+  },
+  "options": {},
+  "attributes": {
+    "specialty": {
+      "type": "string"
+    },
+    "experience": {
+      "type": "integer"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_event_subthemes",
+  "info": {
+    "displayName": "subtheme"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}
