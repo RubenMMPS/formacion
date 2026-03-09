@@ -57,6 +57,19 @@
       },
       "component": "event.material",
       "repeatable": true
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "blocks.rich-text",
+        "blocks.gallery",
+        "blocks.links"
+      ]
     }
   }
 }
