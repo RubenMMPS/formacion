@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { useCounter } from "../Composables/useCounter";
+const { counter, increment, decrement, reset } = useCounter();
+</script>
+
 <template>
   <TheTitle> Contador</TheTitle>
   <div class="p-4 bg-white rounded shadow">
@@ -18,21 +23,9 @@
     >
       increment
     </button>
+
+    <button v-on:click="reset" class="bg-blue-500 text-white px-3 py-2 rounded">
+      reset
+    </button>
   </div>
 </template>
-
-<script setup>
-import { ref } from "vue";
-
-const counter = ref(0);
-
-const increment = () => {
-  counter.value++;
-};
-
-const decrement = () => {
-  if (counter.value > 0) {
-    counter.value--;
-  }
-};
-</script>
