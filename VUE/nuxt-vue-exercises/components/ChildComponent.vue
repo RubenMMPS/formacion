@@ -1,13 +1,12 @@
 <script setup>
-import { defineEmits } from "vue";
+import { inject } from "vue";
 
-const emit = defineEmits(["handleClick"]);
-
-function handleClick() {
-  emit("handleClick", { message: "Hola desde el componente hijo!" });
-}
+const parentMessage = inject("parentMessage", "No llego ningun mensaje");
 </script>
 
 <template>
-  <button @click="handleClick">Emitir Evento</button>
+  <div class="rounded border border-gray-300 p-4">
+    <h4 class="mb-2 font-semibold">Componente Hijo</h4>
+    <p>Mensaje recibido por inject: {{ parentMessage }}</p>
+  </div>
 </template>

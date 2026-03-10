@@ -1,22 +1,24 @@
 <script setup>
-import { ref } from "vue";
+import { ref, provide } from "vue";
 import ChildComponent from "./ChildComponent.vue";
 
-const eventMessage = ref(null);
+const parentMessage = ref("Hola desde ParentComponent");
 
-function handleCustomEvent(payload) {
-  eventMessage.value = payload.message;
+function changeMessage() {
+  parentMessage.value = "Mensaje actualizado desde el padre";
 }
+
+provide("parentMessage", parentMessage);
 </script>
 <template>
   <div class="p-4 bg-white rounded shadow">
     <h3 class="font-bold mb-4">Componente Padre</h3>
-    <ChildComponent @handleClick="handleCustomEvent" />
-    <div
-      v-if="eventMessage"
-      class="mt-4 p-3 bg-green-100 text-green-800 rounded"
+    <button
+      class="mb-4 rounded bg-blue-600 px-3 py-2 text-white"
+      @click="changeMessage"
     >
-      <p>Evento recibido: {{ eventMessage }}</p>
-    </div>
+      Cambiar mensaje del padre
+    </button>
+    <ChildComponent />
   </div>
 </template>

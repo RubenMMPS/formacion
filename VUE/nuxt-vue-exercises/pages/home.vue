@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ParentComponent from "~/components/ParentComponent.vue";
+import ChildComponent from "~/components/ChildComponent.vue";
 import TheCounter from "~/components/TheCounter.vue";
 </script>
 
