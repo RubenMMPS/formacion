@@ -1,6 +1,6 @@
 <template>
   <TheTitle> Contador</TheTitle>
-  <div>
+  <div class="p-4 bg-white rounded shadow">
     <h2>Valor actual = {{ counter }}</h2>
 
     <button

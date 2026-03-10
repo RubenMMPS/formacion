@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ParentComponent from "~/components/ParentComponent.vue";
 import TheCounter from "~/components/TheCounter.vue";
 </script>
 
@@ -8,7 +9,9 @@ import TheCounter from "~/components/TheCounter.vue";
   >
     <TheTitle> Mi Título con Slots </TheTitle>
 
-    <TheCounter class="border-none"></TheCounter>
+    <TheCounter></TheCounter>
+
+    <ParentComponent />
 
     <NuxtLink to="/catalogo">
       <button>Ir al catálogo</button>
