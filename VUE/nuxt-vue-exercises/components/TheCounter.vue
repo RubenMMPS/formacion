@@ -6,7 +6,9 @@ const { counter, increment, decrement, reset } = useCounter();
 <template>
   <TheTitle> Contador</TheTitle>
   <div class="p-4 bg-white rounded shadow">
-    <h2>Valor actual = {{ counter }}</h2>
+    <h2 :class="{ 'text-green-500': counter === 10 }">
+      Valor actual = {{ counter }}
+    </h2>
 
     <button
       v-if="counter > 0"
