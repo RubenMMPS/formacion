@@ -1,6 +1,17 @@
 <script setup lang="ts">
 import { useCounter } from "../Composables/useCounter";
 const { counter, increment, decrement, reset } = useCounter();
+
+let textoValor = "Estas en el valor mínimo";
+
+watch(counter, () => {
+  if (counter.value === 10) textoValor = "Estás en el valor máximo";
+
+  if (counter.value === 0) textoValor = "Estas en el valor mínimo";
+
+  if (counter.value > 0 && counter.value < 10)
+    textoValor = "Estás en los parametros adecuados";
+});
 </script>
 
 <template>
@@ -10,6 +21,7 @@ const { counter, increment, decrement, reset } = useCounter();
       Valor actual = {{ counter }}
     </h2>
     <p>Valor multiplicado por dos: {{ counter * 2 }}</p>
+    <p>{{ textoValor }}</p>
 
     <button
       v-if="counter > 0"
