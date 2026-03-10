@@ -3,9 +3,21 @@
   <div>
     <h2>Valor actual = {{ counter }}</h2>
 
-    <button v-if="counter > 0" v-on:click="decrement">decrement</button>
+    <button
+      v-if="counter > 0"
+      v-on:click="decrement"
+      class="bg-red-500 text-white px-3 py-2 rounded"
+    >
+      decrement
+    </button>
 
-    <button v-if="counter < 10" v-on:click="increment">increment</button>
+    <button
+      v-if="counter < 10"
+      v-on:click="increment"
+      class="bg-green-500 text-white px-3 py-2 rounded"
+    >
+      increment
+    </button>
   </div>
 </template>
 
