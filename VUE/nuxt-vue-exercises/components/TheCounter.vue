@@ -9,6 +9,7 @@ const { counter, increment, decrement, reset } = useCounter();
     <h2 :class="{ 'text-green-500': counter === 10 }">
       Valor actual = {{ counter }}
     </h2>
+    <p>Valor multiplicado por dos: {{ counter * 2 }}</p>
 
     <button
       v-if="counter > 0"
