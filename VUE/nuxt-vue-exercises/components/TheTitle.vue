@@ -1,7 +1,11 @@
+<script setup lang="ts">
+defineProps<{
+  title?: string;
+}>();
+</script>
+
 <template>
   <div>
-    <h1>
-      <slot>Título por defecto</slot>
-    </h1>
+    <h1>{{ title || "Título por defecto" }}</h1>
   </div>
 </template>
