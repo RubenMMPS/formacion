@@ -1,4 +1,5 @@
 <script setup lang="ts">
+/*
 import { useCounter } from "../Composables/useCounter";
 const { counter, increment, decrement, reset } = useCounter();
 
@@ -12,16 +13,25 @@ watch(counter, () => {
   if (counter.value > 0 && counter.value < 10)
     textoValor = "Estás en los parametros adecuados";
 });
+
+*/
+
+import { useCounterStore } from "../stores/counterStore";
+import { storeToRefs } from "pinia";
+
+const counterStore = useCounterStore();
+const { counter, message } = storeToRefs(counterStore);
+const { increment, decrement, reset } = counterStore;
 </script>
 
 <template>
-  <TheTitle> Contador</TheTitle>
+  <TheTitle title="Contador" class="text-center"></TheTitle>
   <div class="p-4 bg-white rounded shadow">
     <h2 :class="{ 'text-green-500': counter === 10 }">
       Valor actual = {{ counter }}
     </h2>
     <p>Valor multiplicado por dos: {{ counter * 2 }}</p>
-    <p>{{ textoValor }}</p>
+    <p class="mb-4">{{ message }}</p>
 
     <button
       v-if="counter > 0"

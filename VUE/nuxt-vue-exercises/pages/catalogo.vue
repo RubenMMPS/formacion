@@ -27,6 +27,11 @@ import { products } from "~/data/mock";
       </ProductCard>
     </div>
   </div>
+  <div
+    class="grid w-fit mx-auto justify-center bg-gray-100 shadow p-4 gap-4 mt-8"
+  >
+    <TheCounter></TheCounter>
+  </div>
   <NuxtLink to="/home" class="flex justify-center">
     <button>Volver al inicio</button>
   </NuxtLink>
