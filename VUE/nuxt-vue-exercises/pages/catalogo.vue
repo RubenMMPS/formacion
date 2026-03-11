@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import ProductCard from "~/components/ProductCard.vue";
 import { products } from "~/data/mock";
+
+definePageMeta({
+  layout: "catalogo" as never,
+});
 </script>
 
 <template>
