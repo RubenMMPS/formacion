@@ -25,9 +25,7 @@ definePageMeta({
         <template #price>
           {{ product.price }}
         </template>
-        <template #button>
-          {{ product.button }}
-        </template>
+        <template #button> Buy now </template>
       </ProductCard>
     </div>
   </div>
