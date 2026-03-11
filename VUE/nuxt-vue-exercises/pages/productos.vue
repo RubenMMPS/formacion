@@ -1,5 +1,7 @@
 <script setup lang="ts">
-navigateTo("/home");
+definePageMeta({
+  middleware: "redirect-productos",
+});
 </script>
 
 <template></template>
