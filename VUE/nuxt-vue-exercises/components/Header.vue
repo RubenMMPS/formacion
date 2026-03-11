@@ -6,6 +6,8 @@
         <NuxtLink to="/home"><button>Home</button></NuxtLink>
         <NuxtLink to="/catalogo"><button>Catalogo</button></NuxtLink>
         <NuxtLink to="/counter"><button>Contador</button></NuxtLink>
+        <NuxtLink to="/productos"><button>Productos</button></NuxtLink>
+        <NuxtLink to="/series-bonitas"><button>Series</button></NuxtLink>
       </div>
     </nav>
   </header>

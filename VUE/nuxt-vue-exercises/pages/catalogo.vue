@@ -36,7 +36,7 @@ definePageMeta({
   >
     <TheCounter></TheCounter>
   </div>
-  <NuxtLink to="/home" class="flex justify-center">
+  <NuxtLink to="/home" class="flex justify-center mt-8">
     <button>Volver al inicio</button>
   </NuxtLink>
 </template>
