@@ -39,7 +39,11 @@ watch(counter, () => {
       increment
     </button>
 
-    <button v-on:click="reset" class="bg-blue-500 text-white px-3 py-2 rounded">
+    <button
+      v-if="counter !== 0"
+      v-on:click="reset"
+      class="bg-blue-500 text-white px-3 py-2 rounded"
+    >
       reset
     </button>
   </div>
