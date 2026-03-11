@@ -2,7 +2,7 @@
 import { Icon } from "@iconify/vue";
 
 const icons = {
-  whatsapp: { link: "streamline-logos:whatsapp-logo-solid", color: "green" },
+  whatsapp: { link: "streamline-logos:whatsapp-logo-solid", color: "blue" },
   github: { link: "streamline-logos:github-logo-2-solid", color: "black" },
 };
 </script>
